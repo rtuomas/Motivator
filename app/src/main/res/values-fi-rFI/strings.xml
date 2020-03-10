@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivator_FINAL</string>
+    <string name="currentLanguage">FI</string>
+
+    <string name="gym">Punttisali</string>
+    <string name="squat">Kyykky</string>
+    <string name="bench">Penkkipunnerrus</string>
+    <string name="deadlift">Maastaveto</string>
+    <string name="sets">Sarjojen määrä</string>
+    <string name="reps">Toistojen määrä</string>
+    <string name="weight">Paino (kg)</string>
+    <string name="apply">Tallenna</string>
+    <string name="language">Valitse kieli</string>
+    <string name="warningText">Valitse haluttu liike!</string>
+
+    <string name="clearData">Haluatko varmasti poistaa kaiken tallennetun tiedon?</string>
+    <string name="clearDataYes">Poista</string>
+    <string name="clearDataNo">Peruuta</string>
+
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GymActivity">
+
+    <NumberPicker
+        android:id="@+id/repsPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.183"
+        android:theme="@style/AppTheme"/>
+
+    <NumberPicker
+        android:id="@+id/setsPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/repsPicker"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <NumberPicker
+        android:id="@+id/weightPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/repsPicker" />
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="applyButton"
+        android:text="@string/apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightPicker" />
+
+    <TextView
+        android:id="@+id/gymText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gym"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="165dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gymText"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/squat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/squat" />
+
+        <RadioButton
+            android:id="@+id/deadlift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deadlift" />
+
+        <RadioButton
+            android:id="@+id/bench"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bench" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#EF0000"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gymText" />
+
+    <TextView
+        android:id="@+id/numOfSets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sets"
+        app:layout_constraintBottom_toTopOf="@+id/repsPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <TextView
+        android:id="@+id/numOfReps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/reps"
+        app:layout_constraintBottom_toTopOf="@+id/repsPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toEndOf="@+id/numOfSets"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="@string/weight"
+        app:layout_constraintBottom_toTopOf="@+id/weightPicker"
+        app:layout_constraintEnd_toStartOf="@+id/repsPicker"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toEndOf="@+id/setsPicker"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.872" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

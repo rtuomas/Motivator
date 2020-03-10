@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Motivator_FINAL</string>
+    <string name="currentLanguage">EN</string>
+
+    <string name="gym">Gym</string>
+    <string name="squat">Squat</string>
+    <string name="bench">Bench press</string>
+    <string name="deadlift">Deadlift</string>
+    <string name="sets">Number of sets</string>
+    <string name="reps">Number of reps</string>
+    <string name="weight">Weight (kg)</string>
+    <string name="apply">Apply</string>
+    <string name="language">Choose language</string>
+    <string name="warningText">Please select movement!</string>
+
+    <string name="clearData">Are you sure you want to delete all data?</string>
+    <string name="clearDataYes">Yes</string>
+    <string name="clearDataNo">No</string>
+
+
+</resources>
