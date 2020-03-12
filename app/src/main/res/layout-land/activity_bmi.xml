@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9FEFF"
     tools:context=".BmiActivity">
 
     <EditText
@@ -14,15 +13,12 @@
         android:ems="10"
         android:hint="@string/height"
         android:inputType="number"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.349" />
 
     <EditText
         android:id="@+id/weightId"
@@ -31,44 +27,35 @@
         android:ems="10"
         android:hint="@string/weight"
         android:inputType="number"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58000004" />
+        app:layout_constraintTop_toBottomOf="@+id/heightId"
+        app:layout_constraintVertical_bias="0.373" />
 
     <TextView
         android:id="@+id/bmiShow"
-        android:layout_width="218dp"
-        android:layout_height="94dp"
-        android:textAlignment="center"
-        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.441" />
 
     <Button
         android:id="@+id/bmiApplyButton"
-        android:layout_width="93dp"
-        android:layout_height="57dp"
-        android:background="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="bmiButton"
-        android:text="@string/count"
-        android:textColor="#636363"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
+        android:text="@string/apply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintTop_toBottomOf="@+id/bmiShow"
+        app:layout_constraintVertical_bias="0.715" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

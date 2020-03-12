@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivator_FINAL</string>
+    <string name="gym">Treningssenter</string>
+    <string name="squat">knebøy</string>
+    <string name="bench">benkpress</string>
+    <string name="deadlift">markløft</string>
+    <string name="sets">Antall sett</string>
+    <string name="reps">Antall reps</string>
+    <string name="weight">Vekt (kg)</string>
+    <string name="height">Høyde (cm)</string>
+    <string name="apply">Aktiver</string>
+    <string name="language">Velg språk</string>
+    <string name="gymWarning">Vennligst velg bevegelse!</string>
+
+    <string name="clearData">Er du sikker på at du vil slette alle data?</string>
+    <string name="clearDataYes">Ja</string>
+    <string name="clearDataNo">Nei</string>
+
+    <string name="bmi0">Svært alvorlig undervekt</string>
+    <string name="bmi1">Alvorlig undervekt</string>
+    <string name="bmi2">Undervekt</string>
+    <string name="bmi3">Normal vekt</string>
+    <string name="bmi4">Overvekt</string>
+    <string name="bmi5">Fedme klasse I</string>
+    <string name="bmi6">Fedme klasse II</string>
+    <string name="bmi7">Fedme klasse III</string>
+
+    <string name="run">Løpe</string>
+    <string name="time">Tid (min)</string>
+    <string name="distance">Avstand (m)</string>
+    <string name="submit">Sende inn</string>
+    <string name="count">Telle</string>
+
+    <string name="currentLanguage">NO</string>
+    <string name="runWarning">Angi tid/eller avstand</string>
+    <string name="velocity">Hastighet</string>
+    <string name="velocity_kmh">Hastighet (km/h)</string>
+
+
+</resources>

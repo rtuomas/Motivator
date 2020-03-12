@@ -1,34 +1,33 @@
 package com.example.motivator_final;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * This activity is meant to illustrate the layout, which gathers the data on the completion of running sessions
+ *
+ *
+ * @author  Maksim Ilmast and Tuomas Rajala
+ * @version 1.0
+ */
 public class RunActivity extends AppCompatActivity {
     private DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
     private EditText time, distance;
-    private TextView testView;
-    private ArrayList<String> runList;
+    private TextView runWarning;
 
+    /**
+     * This is the onCreate method, which sets configuration for the layout basically.
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,30 +36,31 @@ public class RunActivity extends AppCompatActivity {
 
         time = findViewById(R.id.time);
         distance = findViewById(R.id.distance);
+        runWarning = findViewById(R.id.runWarning);
 
     }
 
-
-    //MAKSIMIN VERSIOSTA
-
-    public void applyButton(View view){
-        RadioGroup radioGroup = findViewById(R.id.radioGroup);
-        int selectedRadioButton = radioGroup.getCheckedRadioButtonId();
-
+    /**
+     * This is an onClick method, which collects the data from inputs on the frontend,
+     * parses the data as well as makes the data corresponding and hands out it to the data manipulating instance.
+     */
+    public void applyButton(View view) {
         Date date = new Date();
         String dateToday = dateFormat.format(date);
 
 
-        int distanceMeters = Integer.parseInt(distance.getText().toString());
-        int timeMinutes = Integer.parseInt(time.getText().toString());
-        Double velocity = distanceMeters/(timeMinutes*60)*3.6;
 
+        if ((Integer.parseInt(distance.getText().toString()) > 0  &&  Integer.parseInt(time.getText().toString()) > 0)
+            && (!(distance.getText().toString().isEmpty() && !(time.getText().toString().isEmpty())))) {  //Makes sure that input is not zero.
+            int distanceMeters = Integer.parseInt(distance.getText().toString());
+            int timeMinutes = Integer.parseInt(time.getText().toString());
+            Double velocity = (distanceMeters/1000.0)/(timeMinutes/60.0);    //Converting meters/min to km/h
 
-        RunData.getInstance().addNewRun(velocity, dateToday);
-            //GymData.getInstance().addNewMove(
-            //        getResources().getString(R.string.bench), setsCount, repsCount, weightKg, dateToday);
+            RunData.getInstance().addNewRun(velocity, dateToday);
+            this.finish();
 
-        this.finish();
-
+        } else {
+            runWarning.setText(getResources().getString(R.string.runWarning));
+        }
     }
 }

@@ -5,7 +5,7 @@
     android:id="@+id/clearButton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="#E3E3E3"
     tools:context=".MainActivity">
 
 
@@ -77,17 +77,19 @@
         app:layout_constraintVertical_bias="0.962"
         app:srcCompat="@drawable/settings123" />
 
-    <Button
+    <ImageButton
         android:id="@+id/bmiButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="62dp"
+        android:background="@null"
         android:onClick="bmiButton"
-        android:text="Button"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statsButton"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.642"
+        app:srcCompat="@drawable/bmiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

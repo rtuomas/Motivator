@@ -2,59 +2,67 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clearButton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@android:color/darker_gray">
+    android:background="#E3E3E3"
+    tools:context=".MainActivity">
 
 
     <ImageButton
         android:id="@+id/gymButton"
-        android:layout_width="154dp"
-        android:layout_height="131dp"
+        android:layout_width="152dp"
+        android:layout_height="134dp"
         android:background="@null"
         android:onClick="gymButton"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146"
+        app:layout_constraintVertical_bias="0.509"
         app:srcCompat="@drawable/gym" />
 
     <ImageButton
         android:id="@+id/runButton"
-        android:layout_width="146dp"
-        android:layout_height="126dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="166dp"
+        android:layout_height="122dp"
         android:background="@null"
         android:onClick="runButton"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gymButton"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toEndOf="@+id/gymButton"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/runner" />
-
-    
 
     <ImageButton
         android:id="@+id/statsButton"
-        android:layout_width="163dp"
-        android:layout_height="159dp"
+        android:layout_width="134dp"
+        android:layout_height="130dp"
         android:background="@null"
         android:onClick="arrayButton"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toEndOf="@+id/runButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551"
+        app:layout_constraintVertical_bias="0.487"
         app:srcCompat="@drawable/stats" />
+
+    <TextView
+        android:id="@+id/currentLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -70,5 +78,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.962"
         app:srcCompat="@drawable/settings123" />
+
+    <ImageButton
+        android:id="@+id/bmiButton"
+        android:layout_width="74dp"
+        android:layout_height="62dp"
+        android:background="@null"
+        android:onClick="bmiButton"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639"
+        app:srcCompat="@drawable/bmiicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

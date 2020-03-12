@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Motivator_FINAL</string>
-    <string name="currentLanguage">RU</string>
 
-    <string name="gym">Gymvenäjäksi</string>
-    <string name="squat">Squat</string>
-    <string name="bench">Bench press</string>
-    <string name="deadlift">Deadlift</string>
-    <string name="sets">Number of sets</string>
-    <string name="reps">Number of reps</string>
-    <string name="weight">Weight (kg)</string>
-    <string name="apply">Apply</string>
-    <string name="language">Choose language</string>
-    <string name="warningText">Please select movement!</string>
+        <string name="currentLanguage">RU</string>
+        <string name="gym">Тренажёрный зал</string>
+        <string name="squat">Приседания</string>
+        <string name="bench">Жим лёжа</string>
+        <string name="deadlift">Становая тяга</string>
+        <string name="sets">Количество подходов</string>
+        <string name="reps">Количество повторений</string>
+        <string name="weight">Вес (кг)</string>
+        <string name="apply">Подтвердить</string>
+        <string name="language">Выбрать язык</string>
+        <string name="gymWarning">Пожалуйста, выберите упражнение!</string>
+        <string name="clearData">Вы уверены что хотите удалить все сохранённые данные?</string>
+        <string name="clearDataYes">Да</string>
+        <string name="clearDataNo">Нет</string>
 
-    <string name="clearData">Are you sure you want to delete all data?</string>
-    <string name="clearDataYes">Yes</string>
-    <string name="clearDataNo">No</string>
+
+        <string name="bmi0">Очень сильный недовес</string>
+        <string name="bmi1">Сильный недовес</string>
+        <string name="bmi2">Недовес</string>
+        <string name="bmi3">Нормальный вес</string>
+        <string name="bmi4">Перевес</string>
+        <string name="bmi5">Ожирение I степени</string>
+        <string name="bmi6">Ожирение II степени</string>
+        <string name="bmi7">Ожирение III степени</string>
+
+        <string name="run">Бег</string>
+        <string name="time">Время (мин)</string>
+        <string name="distance">Расстояние (м)</string>
+        <string name="submit">Подтвердить</string>
+        <string name="count">посчитать</string>
+
+        <string name="velocity">Скоростной темп</string>
+        <string name="velocity_kmh">Скоростной темп (км/ч)</string>
+
+        <string name="height">Рост (см)</string>
+        <string name="runWarning">Пожалуйста, введите время и/или расстояние</string>
+
+
+
 
 </resources>

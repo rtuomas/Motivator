@@ -2,8 +2,11 @@ package com.example.motivator_final;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -18,36 +21,54 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.MarkerType;
 import com.anychart.enums.TooltipPositionMode;
 import com.anychart.graphics.vector.Stroke;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lecho.lib.hellocharts.view.LineChartView;
-
+/**
+ * This activity is meant to draw and display the line chart, which contains information
+ * about running sessions.
+ *
+ * @author  Maksim Ilmast
+ * @version 1.0
+ */
 public class StatsActivity extends AppCompatActivity {
-    private ArrayList<String> dataHolder, reversedData;
     private ListView lv;
+    private ArrayList<String> reversedData;
+    public static final String MOVEMENT = "passing movements";
 
+    /**
+     * This is the onCreate method, which sets configuration for the layout and executes the chart drawing function.
+     * Also it sets the listView and implements set on time listener.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
-
         this.drawChart();
 
         lv = findViewById(R.id.listView);
         lv.setAdapter(new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
-                GymData.getInstance().getData()));
+                GymData.getInstance().getReversedList()));  //GymData palautetaan käänteisessä järjestyksessä.
 
-        //TODO GET REVERSED DATA!!!
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent nextActivity = new Intent(StatsActivity.this,
+                        MovementActivity.class);
+                nextActivity.putExtra(MOVEMENT, i);
+                startActivity(nextActivity);
+            }
+        });
     }
 
+    /**
+     * This is the line chart drawing function.
+     * @return Nothing.
+     * https://github.com/AnyChart/AnyChart-Android
+     */
     private void drawChart() {
         AnyChartView anyChartView = findViewById(R.id.any_chart_view);
         anyChartView.setProgressBar(findViewById(R.id.progress_bar));
@@ -59,15 +80,15 @@ public class StatsActivity extends AppCompatActivity {
                 .yLabel(true)
                 .yStroke((Stroke) null, null, null, (String) null, (String) null);
         cartesian.tooltip().positionMode(TooltipPositionMode.POINT);
-        cartesian.title("TESTI");
-        cartesian.yAxis(0).title("Velocity (km/h)");
+        cartesian.title(getResources().getString(R.string.velocity));
+        cartesian.yAxis(0).title(getResources().getString(R.string.velocity_kmh));
         cartesian.xAxis(0).labels().padding(5d, 5d, 5d, 5d);
         List<DataEntry> dataSet = this.getDataSet();
         Set set = Set.instantiate();
         set.data(dataSet);
         Mapping dataSetMapping = set.mapAs("{ x: 'x', value: 'value' }");
         Line series1 = cartesian.line(dataSetMapping);
-        series1.name("Username");
+        series1.name("Your result:");
         series1.hovered().markers().enabled(true);
         series1.hovered().markers()
                 .type(MarkerType.CIRCLE)
@@ -80,8 +101,12 @@ public class StatsActivity extends AppCompatActivity {
         anyChartView.setChart(cartesian);
     }
 
+    /**
+     * This is the function, which returns compiled datasets in order to use them as a basis for the chart.
+     * @return Nothing.
+     * https://github.com/AnyChart/AnyChart-Android
+     */
     private List<DataEntry> getDataSet() {
-        //TODO return all the data!!
         RunData runData = RunData.getInstance();
         List<DataEntry> dataSet =  new ArrayList<>();
         dataSet.addAll(runData.getRuns());

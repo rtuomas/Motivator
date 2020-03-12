@@ -10,13 +10,33 @@
     <string name="sets">Number of sets</string>
     <string name="reps">Number of reps</string>
     <string name="weight">Weight (kg)</string>
+    <string name="height">Height (cm)</string>
     <string name="apply">Apply</string>
     <string name="language">Choose language</string>
-    <string name="warningText">Please select movement!</string>
+    <string name="gymWarning">Please select movement!</string>
+    <string name="runWarning">Please enter time and/or distance</string>
 
     <string name="clearData">Are you sure you want to delete all data?</string>
     <string name="clearDataYes">Yes</string>
     <string name="clearDataNo">No</string>
+
+    <string name="bmi0">Very severely underweight</string>
+    <string name="bmi1">Severely underweight</string>
+    <string name="bmi2">Underweight</string>
+    <string name="bmi3">Normal weight</string>
+    <string name="bmi4">Overweight</string>
+    <string name="bmi5">Obese class I</string>
+    <string name="bmi6">Obese class II</string>
+    <string name="bmi7">Obese class III</string>
+
+    <string name="run">Run</string>
+    <string name="time">Time (min)</string>
+    <string name="distance">Distance (m)</string>
+    <string name="submit">Submit</string>
+    <string name="count">count</string>
+
+    <string name="velocity">Velocity</string>
+    <string name="velocity_kmh">Velocity (km/h)</string>
 
 
 </resources>

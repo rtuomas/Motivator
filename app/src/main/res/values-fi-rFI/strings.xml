@@ -10,12 +10,32 @@
     <string name="sets">Sarjojen määrä</string>
     <string name="reps">Toistojen määrä</string>
     <string name="weight">Paino (kg)</string>
+    <string name="height">Pituus (cm)</string>
     <string name="apply">Tallenna</string>
     <string name="language">Valitse kieli</string>
-    <string name="warningText">Valitse haluttu liike!</string>
+    <string name="gymWarning">Valitse haluttu liike!</string>
+    <string name="runWarning">Syötä aika ja/tai matka kiitos!</string>
 
     <string name="clearData">Haluatko varmasti poistaa kaiken tallennetun tiedon?</string>
     <string name="clearDataYes">Poista</string>
     <string name="clearDataNo">Peruuta</string>
+
+    <string name="bmi0">Vaikea alipaino</string>
+    <string name="bmi1">Merkittävä alipaino</string>
+    <string name="bmi2">Alipaino</string>
+    <string name="bmi3">Normaalipaino</string>
+    <string name="bmi4">Ylipaino</string>
+    <string name="bmi5">Lihavuusluokka I</string>
+    <string name="bmi6">Lihavuusluokka II</string>
+    <string name="bmi7">Lihavuusluokka III</string>
+
+    <string name="run">Juoksu</string>
+    <string name="time">Aika (min)</string>
+    <string name="distance">Matka (m)</string>
+    <string name="submit">Tallenna</string>
+    <string name="count">laske</string>
+
+    <string name="velocity">Keskinopeus</string>
+    <string name="velocity_kmh">Nopeus (km/h)</string>
 
 </resources>
